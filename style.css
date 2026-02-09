@@ -1,0 +1,268 @@
+body {
+    background-image: url('images/blackhole.png');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    color: #ffffff;
+    padding-bottom: 50px; /* Adjust for footer height */
+    min-height: 100vh; /* Ensures content extends to at least the height of the viewport */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+section {
+    max-width: 800px; /* Limit the width of the text */
+    margin: 0 auto; /* Center the section element */
+    text-align: left; /* Ensure natural reading flow */
+    line-height: 1.6; /* Improve readability */
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap; /* Ensure it wraps nicely on smaller screens */
+}
+
+#about img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about div {
+    max-width: 600px; /* Limit the width of the text */
+    text-align: left; /* Ensure natural reading flow */
+    padding: 1rem;
+    line-height: 1.6; /* Improve readability */
+}
+
+
+#interests h1 {
+    border-bottom: 1px solid #ffffff; /* Adds the underline */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: Make the title bold */
+    margin-bottom: 1rem; /* Optional: Add space below the title */
+
+}
+
+#projects h1 {
+    border-bottom: 1px solid #ffffff; /* Adds the underline */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: Make the title bold */
+    margin-bottom: 1rem; /* Optional: Add space below the title */
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    #about {
+        flex-direction: column; /* Stack content on smaller screens */
+        text-align: center; /* Center align for better mobile aesthetics */
+    }
+
+    #about div {
+        padding: 1rem 0;
+    }
+}
+
+/* Image class */
+
+/* Base styles for image-section */
+.image-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Space between image and text */
+    padding: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.image-section img {
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+.image-section-right {
+    flex-direction: row-reverse; /* Reverse the order so the image appears on the right */
+}
+
+.image-section div {
+    line-height: 1.6; /* Improve readability */
+    text-align: left; /* Natural reading flow */
+}
+
+/* Small size (Image 2: Text 1) */
+.image-size-small img {
+    flex: 1; /* Image takes 1 parts */
+    max-width: 200px; /* Adjust max width for smaller size */
+}
+
+.image-size-small div {
+    flex: 2; /* Text takes 2 part */
+    max-width: 600px; /* Limit text width for small layout */
+}
+
+/* Medium size (Default ratios: Image 1: Text 2) */
+.image-size-medium img {
+    flex: 2; /* Image takes 2 part */
+    max-width: 300px;
+}
+
+.image-size-medium div {
+    flex: 1; /* Text takes 1 parts */
+    max-width: 600px;
+}
+
+
+/* Large size (Image 1: Text 3) */
+.image-size-large img {
+    flex: 1; /* Image takes 1 part */
+    max-width: 400px; /* Adjust max width for larger size */
+}
+
+.image-size-large div {
+    flex: 3; /* Text takes 3 parts */
+    max-width: 600px; /* Allow wider text */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align for better display */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Ensure image scales for smaller screens */
+    }
+
+    .image-section div {
+        max-width: 100%; /* Allow text to scale as well */
+    }
+}
+
+
+
+
+a:link {
+    color: rgb(0, 195, 255); /* Default color for unvisited links */
+}
+
+a:visited {
+    color: rgb(253, 102, 228); /* Color for visited links */
+}
+
+
+header .header-link:link {
+    color: white;
+}
+
+header .header-link:visited {
+    color: lightgray;
+}
+
+header .header-link:hover {
+    color: lightblue;
+}
+
+header .header-link:active {
+    color: darkgray;
+}
+header .header-link.current {
+color: lightblue;
+}
+
+
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 30%;
+  padding: 5px;
+}
+
+
+.col-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+figcaption {
+  text-align: center;
+}
+
+figure {
+  display: block;
+  margin-left: 0px;
+  margin-right: 0px;
+}
